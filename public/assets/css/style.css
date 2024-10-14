@@ -4,14 +4,15 @@ body {
 }
 
 a {
-  color: #f7af46;
+  color: #000000;
   text-decoration: none;
 }
 
 a:hover {
-  color: #f7af46;
+  color: #000000;
   text-decoration: none;
 }
+
 
 h1,
 h2,
@@ -70,7 +71,7 @@ img {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #f7af46;
+  background: #e25e20;
 }
 
 #preloader:before {
@@ -78,7 +79,7 @@ img {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #f7af46;
+  border: 6px solid #e25e20;
   border-top-color: #fff;
   border-bottom-color: #fff;
   border-radius: 50%;
@@ -118,7 +119,7 @@ img {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #f7af46;
+  background: #e25e20;
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -132,7 +133,7 @@ img {
 }
 
 .back-to-top:hover {
-  background: #f7af46;
+  background: #e25e20;
   color: #fff;
 }
 
@@ -425,19 +426,19 @@ color: #ffc107;
 
 
 /*--------------------------------------------------------------
-# Home Section
+# Beranda Section
 --------------------------------------------------------------*/
-#home {
+#beranda {
   width: 105%;
   height: 80vh;
   background: #37517e;
 }
 
-#home .container {
+#beranda.container {
   padding-top: 72px;
 }
 
-#home h1 {
+#beranda h1 {
   margin: 0 0 10px 0;
   font-size: 42px;
   font-weight: 600;
@@ -445,13 +446,13 @@ color: #ffc107;
   color: #fff;
 }
 
-#home h2 {
+#beranda h2 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
   font-size: 22px;
 }
 
-#home .btn-get-started {
+#beranda.btn-get-started {
   font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -465,11 +466,11 @@ color: #ffc107;
   background: #e25e20;
 }
 
-#home .btn-get-started:hover {
+#beranda .btn-get-started:hover {
   background:#e25e20;
 }
 
-#home .btn-watch-video {
+#beranda.btn-tonton-video {
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -479,7 +480,7 @@ color: #ffc107;
   line-height: 1;
 }
 
-#home .btn-watch-video i {
+#beranda .btn-tonton-video i {
   line-height: 0;
   color: #fff;
   font-size: 32px;
@@ -487,15 +488,15 @@ color: #ffc107;
   margin-right: 8px;
 }
  @media (max-width: 768px) {
-      #home {
+      #beranda {
           padding: 20px 0;
       }
 
-      #home h1 {
+      #beranda h1 {
           font-size: 32px;
       }
 
-      #home p {
+      #beranda p {
           font-size: 16px;
       }
 
@@ -513,11 +514,11 @@ color: #ffc107;
           font-size: 14px;
       }
   }
-#home .btn-watch-video:hover i {
+#beranda .btn-tonton-video:hover i {
   color: #e25e20;
 }
 
-#home .animated {
+#beranda .animated {
   animation: up-down 2s ease-in-out infinite alternate-reverse both;
 }
 .floating-img {
@@ -530,7 +531,7 @@ color: #ffc107;
 
 .floating-img {
   animation: float 6s ease-in-out infinite; /* Slowed down the animation */
-}
+} 
 
 @keyframes float {
   0%, 100% {
@@ -551,48 +552,48 @@ color: #ffc107;
 }
 
 @media (max-width: 991px) {
-  #home {
+  #beranda {
     height: 100vh;
     text-align: center;
   }
 
-  #home .animated {
+  #beranda .animated {
     -webkit-animation: none;
     animation: none;
   }
 
-  #home .home-img {
+  #beranda .beranda-img {
     text-align: center;
   }
 
-  #home .home-img img {
+  #beranda .beranda-img img {
     width: 50%;
   }
 }
 
 @media (max-width: 768px) {
-  #home h1 {
+  #beranda h1 {
     font-size: 28px;
     line-height: 36px;
   }
 
-  #home h2 {
+  #beranda h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
 
-  #home .home-img img {
+  #beranda .beranda-img img {
     width: 70%;
   }
 }
 
 @media (max-width: 575px) {
-  #home .home-img img {
+  #beranda .beranda-img img {
     width: 80%;
   }
 
-  #home .btn-get-started {
+  #beranda .btn-get-started {
     font-size: 16px;
     padding: 10px 24px 11px 24px;
   }
@@ -617,6 +618,79 @@ color: #ffc107;
     transform: translateY(-10px);
   }
 }
+
+.video-button {
+  display: flex; /* Jika menggunakan flexbox */
+  align-items: center; /* Menyusun elemen secara vertikal */
+  background-color: #007bff; /* Gaya latar belakang */
+  padding: 10px; /* Gaya padding */
+  color: white; /* Warna teks */
+}
+
+.floating-img {
+  transition: transform 0.3s; /* Animasi transisi */
+}
+
+.floating-img:hover {
+  transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+
+/* Perbaikan untuk modal */
+.modal {
+  display: none; /* Tersembunyi secara default */
+  position: fixed;
+  z-index: 9999; /* Memastikan modal ada di atas elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* Tambahkan radius untuk membuat sudut lebih lembut */
+  max-width: 600px; /* Maksimal lebar modal */
+  width: 90%; /* Lebar modal responsif */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #aaa;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Flexbox untuk modal */
+.modal {
+  display: none; /* Awalnya tersembunyi */
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center; /* Pusatkan secara horizontal */
+  align-items: center; /* Pusatkan secara vertikal */
+}
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -699,52 +773,52 @@ section {
 }
 
 /*--------------------------------------------------------------
-# About Us
+# Tentang Us
 --------------------------------------------------------------*/
 
-.about {
+.tentang {
   background-color: #fccf7c; /* Light background color for the section */
   padding-top: 60px; /* Extra padding for the top */
   padding-bottom: 60px; /* Extra padding for the bottom */
 }
 
-.about .section-title {
+.tentang .section-title {
   margin-bottom: 40px;
 }
 
-.about .section-title h2 {
+.tentang .section-title h2 {
   font-size: 32px;
   font-weight: 700;
-  color : #f7af46;
+  color : #e25e20;
 }
 
-.about .content {
+.tentang  .content {
   display: flex;
   flex-wrap: wrap;
 }
 
-.about .content .col-lg-6 {
+.tentang  .content .col-lg-6 {
   margin-bottom: 30px;
 }
 
-.about .content h3 {
+.tentang  .content h3 {
   font-weight: 600;
   font-size: 26px;
 }
 
-.about .content ul {
+.tentang  .content ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.about .content ul li {
+.tentang .content ul li {
   padding-left: 28px;
   position: relative;
   margin-top: 10px;
 }
 
-.about .content ul li i {
+.tentang  .content ul li i {
   position: absolute;
   left: 0;
   top: 2px;
@@ -752,11 +826,11 @@ section {
   color: #47b2e4;
 }
 
-.about .content p:last-child {
+.tentang  .content p:last-child {
   margin-bottom: 0;
 }
 
-.about .content .btn-learn-more {
+.tentang .content .btn-learn-more {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -764,20 +838,24 @@ section {
   display: inline-block;
   padding: 12px 32px;
   border-radius: 4px;
-  border: 2px solid #f7af46;
-  color: #f7af46;
+  border: 2px solid #ee8309;
+  color: #ee8309;
   background: transparent;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
 }
 
-.about .content .btn-learn-more:hover {
-  background: #f7af46;
+.tentang .content .btn-learn-more:hover {
+  background: #ee8309;
   color: #fff;
 }
 
+#tentang {
+  scroll-margin-top: 100px; /* Sesuaikan jarak dengan tinggi navbar */
+}
+
 @media (max-width: 767px) {
-  .about .content {
+  .tentang .content {
     flex-direction: column;
   }
 }
@@ -792,7 +870,7 @@ section {
 .why-us .content h3 {
   font-weight: 400;
   font-size: 34px;
-  color: #f7af46;
+  color: #ee8309;
 }
 
 .why-us .content h4 {
@@ -844,7 +922,7 @@ section {
 }
 
 .why-us .accordion-list span {
-  color: #f7af46;
+  color: #ee6509;
   font-weight: 600;
   font-size: 18px;
   padding-right: 10px;
@@ -871,7 +949,7 @@ section {
 }
 
 .why-us .accordion-list a.collapsed:hover {
-  color: #f7af46;
+  color: #e25e20;
 }
 
 .why-us .accordion-list a.collapsed .icon-show {
@@ -935,7 +1013,7 @@ section {
 .skills .content h3 {
   font-weight: 700;
   font-size: 32px;
-  color: #f7af46;
+  color: #ee6509;
   font-family: "Poppins", sans-serif;
 }
 
@@ -993,47 +1071,47 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
+# Layanan
 --------------------------------------------------------------*/
-.services .icon-box {
+.layanan .icon-box {
   box-shadow: 0px 0 25px 0 rgba(247, 175, 70, 0.8);
   padding: 50px 30px;
   transition: all ease-in-out 0.4s;
   background: #fff;
 }
 
-.services .icon-box .icon {
+.layanan .icon-box .icon {
   margin-bottom: 10px;
 }
 
-.services .icon-box .icon i {
+.layanan .icon-box .icon i {
   color: #e25e20;
   font-size: 36px;
   transition: 0.3s;
 }
 
-.services .icon-box h4 {
+.layanan .icon-box h4 {
   font-weight: 500;
   margin-bottom: 15px;
   font-size: 24px;
 }
 
-.services .icon-box h4 a {
+.layanan.icon-box h4 a {
   color: #e25e20;
   transition: ease-in-out 0.3s;
 }
 
-.services .icon-box p {
+.layanan .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
+.layanan .icon-box:hover {
   transform: translateY(-10px);
 }
 
-.services .icon-box:hover h4 a {
+.layanan.icon-box:hover h4 a {
   color: #e25e20;
 }
 
@@ -1346,13 +1424,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Pricing
+# Harga
 --------------------------------------------------------------*/
-.pricing .row {
+.harga .row {
   padding-top: 40px;
 }
 
-.pricing .box {
+.harga .box {
   padding: 60px 40px;
   box-shadow: 0 3px 20px -2px rgba(20, 45, 100, 0.1);
   background: #fff;
@@ -1361,14 +1439,20 @@ section {
   border-radius: 5px;
 }
 
-.pricing h3 {
+.about .section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color : #e25e20;
+}
+
+.harga h3 {
   font-weight: 500;
   margin-bottom: 15px;
   font-size: 20px;
-  color: #f7af46;
+  color: #ee8309;
 }
 
-.pricing h4 {
+.harga h4 {
   font-size: 48px;
   color: #e25e20;
   font-weight: 400;
@@ -1376,17 +1460,17 @@ section {
   margin-bottom: 25px;
 }
 
-.pricing h4 sup {
+.harga h4 sup {
   font-size: 28px;
 }
 
-.pricing h4 span {
-  color: #f7af46;
+.harga h4 span {
+  color: #e25e20;
   font-size: 18px;
   display: block;
 }
 
-.pricing ul {
+.harga ul {
   padding: 20px 0;
   list-style: none;
   color: #999;
@@ -1394,12 +1478,12 @@ section {
   line-height: 20px;
 }
 
-.pricing ul li {
+.harga ul li {
   padding: 10px 0 10px 30px;
   position: relative;
 }
 
-.pricing ul i {
+.harga ul i {
   color: #28a745;
   font-size: 24px;
   position: absolute;
@@ -1407,19 +1491,19 @@ section {
   top: 6px;
 }
 
-.pricing ul .na {
+.harga ul .na {
   color: #ccc;
 }
 
-.pricing ul .na i {
+.harga ul .na i {
   color: #ccc;
 }
 
-.pricing ul .na span {
+.harga ul .na span {
   text-decoration: line-through;
 }
 
-.pricing .buy-btn {
+.harga .buy-btn {
   display: inline-block;
   padding: 12px 35px;
   border-radius: 50px;
@@ -1432,44 +1516,170 @@ section {
   border: 1px solid #f7af46;
 }
 
-.pricing .buy-btn:hover {
+.harga .buy-btn:hover {
   background: #f7af46;
   color: #fff;
 }
 
-.pricing .featured {
+.harga .featured {
   border-top-color: #f7af46;
 }
 
-.pricing .featured .buy-btn {
+.harga .featured .buy-btn {
   background: #f7af46;
   color: #fff;
 }
 
-.pricing .featured .buy-btn:hover {
+.harga .featured .buy-btn:hover {
   background: #f7af46;
 }
 
 @media (max-width: 992px) {
-  .pricing .box {
+  .harga .box {
     max-width: 60%;
     margin: 0 auto 30px auto;
   }
 }
 
 @media (max-width: 767px) {
-  .pricing .box {
+  .harga .box {
     max-width: 80%;
     margin: 0 auto 30px auto;
   }
 }
 
 @media (max-width: 420px) {
-  .pricing .box {
+  .harga .box {
     max-width: 100%;
     margin: 0 auto 30px auto;
   }
 }
+
+/* Styling untuk package card */
+.package-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 350px;
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.price-text {
+  color: #e25e20;
+  margin-top: 10px;
+}
+
+.features-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.features-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.features-list i {
+  color: #e25e20;
+  margin-right: 8px;
+}
+
+.buy-btn {
+  display: inline-block;
+  background-color: #e25e20;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #c04b1a;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .package-card {
+    max-width: 100%;
+  }
+}
+
+/* Container layout */
+.layout-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.package-card {
+  flex: 1 1 calc(33.33% - 1rem); /* 3 kotak per baris */
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-content {
+  padding: 1rem;
+  text-align: center;
+}
+
+.price-text {
+  color: #e25e20;
+  font-size: 1.5rem;
+}
+
+.buy-btn {
+  display: inline-block;
+  background-color: #e25e20;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #d64f1c;
+}
+
+@media (max-width: 1024px) {
+  .package-card {
+    flex: 1 1 calc(50% - 1rem); /* 2 kotak per baris pada ukuran layar medium */
+  }
+}
+
+@media (max-width: 768px) {
+  .package-card {
+    flex: 1 1 100%; /* 1 kotak per baris pada layar kecil */
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
@@ -1511,7 +1721,7 @@ section {
   position: absolute;
   right: 0;
   left: 20px;
-  color: #f7af46;
+  color: #e25e20;
 }
 
 .faq .faq-list .icon-show,
@@ -1537,7 +1747,7 @@ section {
 }
 
 .faq .faq-list a.collapsed:hover {
-  color: #f7af46;
+  color: #f54500;
 }
 
 .faq .faq-list a.collapsed .icon-show {
@@ -1555,20 +1765,20 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Contact
+# Kontak
 --------------------------------------------------------------*/
-.contact .info {
-  border-top: 3px solid #f7af46;
-  border-bottom: 3px solid #f7af46;
+.kontak .info {
+  border-top: 3px solid #e25e20;
+  border-bottom: 3px solid #e25e20;
   padding: 30px;
   background: #fff;
   width: 100%;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 
-.contact .info i {
+.kontak .info i {
   font-size: 20px;
-  color:  #f7af46;
+  color:  #e25e20;
   float: left;
   width: 44px;
   height: 44px;
@@ -1580,30 +1790,30 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.contact .info h4 {
+.kontak .info h4 {
   padding: 0 0 0 60px;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #f7af46;
+  color: #e25e20;
 }
 
-.contact .info p {
+.kontak .info p {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #f7af46;
+  color: #000000;
 }
 
-.contact .info .email p {
+.kontak .info .email p {
   padding-top: 5px;
 }
 
-.contact .info .social-links {
+.kontak .info .social-links {
   padding-left: 60px;
 }
 
-.contact .info .social-links a {
+.kontak .info .social-links a {
   font-size: 18px;
   display: inline-block;
   background: #333;
@@ -1618,32 +1828,32 @@ section {
   margin-right: 10px;
 }
 
-.contact .info .social-links a:hover {
-  background: #f7af46;
+.kontak .info .social-links a:hover {
+  background: #f54500;
   color: #fff;
 }
 
-.contact .info .email:hover i,
-.contact .info .address:hover i,
-.contact .info .phone:hover i {
-  background: #f7af46;
+.kontak .info .email:hover i,
+.kontak .info .address:hover i,
+.kontak .info .phone:hover i {
+  background: #f54500;
   color: #fff;
 }
 
-.contact .php-email-form {
+.kontak .php-email-form {
   width: 100%;
-  border-top: 3px solid #f7af46;
-  border-bottom: 3px solid #f7af46;
+  border-top: 3px solid #161616;
+  border-bottom: 3px solid #f54500;
   padding: 30px;
   background: #fff;
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
 
-.contact .php-email-form .form-group {
+.kontak .php-email-form .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
+.kontak .php-email-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -1651,7 +1861,7 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.kontak .php-email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -1660,11 +1870,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.kontak .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.kontak .php-email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -1673,14 +1883,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.kontak .php-email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.kontak .php-email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -1693,37 +1903,37 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form .form-group {
+.kontak .php-email-form .form-group {
   margin-bottom: 20px;
 }
 
-.contact .php-email-form label {
+.kontak .php-email-form label {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.kontak .php-email-form input,
+.kontak .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   border-radius: 4px;
 }
 
-.contact .php-email-form input:focus,
-.contact .php-email-form textarea:focus {
-  border-color: #f7af46;
+.kontak .php-email-form input:focus,
+.kontak .php-email-form textarea:focus {
+  border-color:#f54500;
 }
 
-.contact .php-email-form input {
+.kontak .php-email-form input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.kontak .php-email-form textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
-  background: #f7af46;
+.kontak .php-email-form button[type="submit"] {
+  background: #f54500;
   border: 0;
   padding: 12px 34px;
   color: #fff;
@@ -1731,8 +1941,8 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background: #f7af46;
+.kontak .php-email-form button[type="submit"]:hover {
+  background: #ed3c0d;
 }
 
 @-webkit-keyframes animate-loading {
@@ -1863,11 +2073,11 @@ section {
   background: #fff;
 }
 
-#footer .footer-top .footer-contact {
+#footer .footer-top .footer-kontak {
   margin-bottom: 30px;
 }
 
-#footer .footer-top .footer-contact h3 {
+#footer .footer-top .footer-kontak h3 {
   font-size: 28px;
   margin: 0 0 10px 0;
   padding: 2px 0 2px 0;
@@ -1876,7 +2086,7 @@ section {
   color: #37517e;
 }
 
-#footer .footer-top .footer-contact p {
+#footer .footer-top .footer-kontak p {
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 0;
@@ -1988,7 +2198,6 @@ section {
   }
 }
 
-
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -2076,21 +2285,21 @@ height: 40px; /* Same as the image size */
 width: 40px;  /* Same as the image size */
 }
 
-.about {
+.tentang {
   padding: 60px 0;
   background-color: #ffffff;
   color: #333;
 }
-.about h2 {
-  color: #f7af46;
+.tentang h2 {
+  color: #e25e20;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 50px;
 }
 
-.services h2 {
-  color: #f7af46;
+.layanan h2 {
+  color: #e25e20;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
@@ -2124,7 +2333,7 @@ text-align: center;
 margin-bottom: 50px;
 }
 
-.contact h2 {
+.kontak h2 {
   color: #f7af46;
   font-size: 2rem;
   font-weight: bold;
